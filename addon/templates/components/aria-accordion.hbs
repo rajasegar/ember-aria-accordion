@@ -1,4 +1,11 @@
-{{yield (hash
-  accordion=(component 'aria-accordion/accordion-group' group=this)
-  name=name
-)}}
+<dl id="accordionGroup" role="presentation" class="Accordion">
+  {{yield (hash
+    panel=(component 'accordion-panel'
+    active=active
+    toggle=toggle
+    multiple=multiple
+    refresh=refresh
+    activePanels=activePanels
+    select=(action 'selectAccordion'))
+    )  }}
+</dl>

@@ -1,1 +1,0 @@
-export { default } from 'ember-aria-accordion/components/aria-accordion/panel';
