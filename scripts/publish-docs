@@ -8,3 +8,4 @@ cp -R /tmp/ember-aria-accordion ./
 git add .
 git commit -m "Publishing docs for $(git describe --tags)"
 git push origin gh-pages
+git checkout master
