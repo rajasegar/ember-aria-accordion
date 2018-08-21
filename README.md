@@ -1,6 +1,16 @@
 # ember-aria-accordion
+[![Build Status](https://travis-ci.org/rajasegar/ember-aria-accordion.svg?branch=master)](https://travis-ci.org/rajasegar/ember-aria-accordion) 
+[![Coverage Status](https://coveralls.io/repos/github/rajasegar/ember-aria-accordion/badge.svg?branch=master)](https://coveralls.io/github/rajasegar/ember-aria-accordion?branch=master)
+[![npm version](http://img.shields.io/npm/v/ember-aria-accordion.svg?style=flat)](https://npmjs.org/package/ember-aria-accordion "View this project on npm")
+[![dependencies Status](https://david-dm.org/rajasegar/ember-aria-accordion/status.svg)](https://david-dm.org/rajasegar/ember-aria-accordion)
+[![devDependencies Status](https://david-dm.org/rajasegar/ember-aria-accordion/dev-status.svg)](https://david-dm.org/rajasegar/ember-aria-accordion?type=dev)
+[![EmberObserver](http://emberobserver.com/badges/ember-aria-accordion.svg?branch=master)](http://emberobserver.com/addons/ember-aria-accordion)
+
 
 This README outlines the details of collaborating on this Ember addon.
+
+## Demo
+[https://rajasegar.github.io/ember-aria-accordion](https://rajasegar.github.io/ember-aria-accordion)
 
 ## Installation
 

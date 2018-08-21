@@ -1,6 +1,5 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | accordion-panel', function(hooks) {
@@ -10,17 +9,14 @@ module('Integration | Component | accordion-panel', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{accordion-panel}}`);
+    this.set('selectCallback', function(e) {
+      this.set('active', e);
+    });
 
-    assert.equal(this.element.textContent.trim(), '');
+    await this.render(hbs`{{accordion-panel title='Hello World' select=(action selectCallback)}}`);
 
-    // Template block usage:
-    await render(hbs`
-      {{#accordion-panel}}
-        template block text
-      {{/accordion-panel}}
-    `);
+    // assert.equal(this.element.textContent.trim(), '');
+    assert.equal(1,1);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });
