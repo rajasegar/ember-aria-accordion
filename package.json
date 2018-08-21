@@ -19,7 +19,8 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "npm version patch && git push && git push --tags && npm publish"
+    "deploy": "npm version patch && git push && git push --tags && npm publish",
+    "publish-docs": "scripts/publish-docs"
   },
   "dependencies": {
     "ember-cli-babel": "^6.16.0",

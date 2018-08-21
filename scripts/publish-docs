@@ -1,0 +1,10 @@
+#!/bin/sh
+rm -Rf dist/*
+ember build --env=production
+mkdir /tmp/ember-aria-accordion
+cp -R dist/* /tmp/ember-aria-accordion
+git checkout gh-pages
+cp -R /tmp/ember-aria-accordion ./
+git add .
+git commit -m "Publishing docs for $(git describe --tags)"
+git push origin gh-pages
