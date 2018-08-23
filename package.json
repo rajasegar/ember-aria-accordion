@@ -52,7 +52,6 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.3.2",
-    "ember-welcome-page": "^3.2.0",
     "loader.js": "^4.7.0"
   },
   "engines": {
