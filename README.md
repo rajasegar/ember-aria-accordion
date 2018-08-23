@@ -7,7 +7,7 @@
 [![EmberObserver](http://emberobserver.com/badges/ember-aria-accordion.svg?branch=master)](http://emberobserver.com/addons/ember-aria-accordion)
 
 
-An Accordion component in Ember based on the WAI-ARIA authoring practices.
+An Accordion component in Ember based on the [WAI-ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices/#accordion).
 
 ## Demo
 [https://rajasegar.github.io/ember-aria-accordion](https://rajasegar.github.io/ember-aria-accordion)
@@ -43,13 +43,36 @@ Allow for each toggle to both open and close individually
 Allow for multiple accordion sections to be expanded at the same time. 
 Assumes toggle option is true, otherwise you would not be able to close any of the accordions
 
+## Keyboard Interaction
+
+### Enter or Space:
+        When focus is on the accordion header for a collapsed panel, expands the associated panel. If the implementation allows only one panel to be expanded, and if another panel is expanded, collapses that panel.
+        When focus is on the accordion header for an expanded panel, collapses the panel if the implementation supports collapsing. Some implementations require one panel to be expanded at all times and allow only one panel to be expanded; so, they do not support a collapse function.
+
+### Tab: 
+Moves focus to the next focusable element; all focusable elements in the accordion are included in the page Tab sequence.
+
+### Shift + Tab: 
+Moves focus to the previous focusable element; all focusable elements in the accordion are included in the page Tab sequence.
+
+### Down Arrow : 
+If focus is on an accordion header, moves focus to the next accordion header. If focus is on the last accordion header, either does nothing or moves focus to the first accordion header.
+
+### Up Arrow : 
+If focus is on an accordion header, moves focus to the previous accordion header. If focus is on the first accordion header, either does nothing or moves focus to the last accordion header.
+
+### Home : 
+When focus is on an accordion header, moves focus to the first accordion header.
+
+### End : 
+When focus is on an accordion header, moves focus to the last accordion header.
+
+
+
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-aria-accordion`
-* `npm install`
-* `bower install`
+* `ember install ember-aria-accordion`
 
 ## Running
 

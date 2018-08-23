@@ -1,7 +1,14 @@
 import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-import { find, findAll, click, render } from '@ember/test-helpers';
+import { find, findAll, focus,  click, render, triggerKeyEvent } from '@ember/test-helpers';
+
+const KEY_PAGE_UP = 33;
+const KEY_PAGE_DOWN = 34;
+const KEY_END = 35;
+const KEY_HOME = 36;
+const KEY_UP_ARROW = 38;
+const KEY_DOWN_ARROW = 40;
 
 
 module('aria-accordion', 'Integration | Component | aria accordion', function(hooks) {
@@ -12,7 +19,7 @@ module('aria-accordion', 'Integration | Component | aria accordion', function(ho
 
     await render(hbs`
     {{#aria-accordion active=active  as |a|}}
-    {{#a.panel title="Personal Information" }}
+    {{#a.panel title="Profile" }}
       <p> Personal Information</p>
     {{/a.panel}}
     {{#a.panel title="Home" }}
@@ -50,6 +57,44 @@ module('aria-accordion', 'Integration | Component | aria accordion', function(ho
     await click('button#accordion-Settings');
     assert.equal(this.get('active'), 'Settings');
   });
+
+  test('should focus next accordion on DOWN-ARROW', async function(assert) {
+    await focus('button#accordion-Profile');
+    await triggerKeyEvent('button#accordion-Profile', 'keydown', KEY_DOWN_ARROW );
+    assert.equal(document.activeElement.id, "accordion-Home");
+  });
+
+  test('should focus next accordion on PAGE-DOWN', async function(assert) {
+    await focus('button#accordion-Profile');
+    await triggerKeyEvent('button#accordion-Profile', 'keydown', KEY_PAGE_DOWN );
+    assert.equal(document.activeElement.id, "accordion-Home");
+  });
+
+  test('should focus previous accordion on UP-ARROW', async function(assert) {
+    await focus('button#accordion-Home');
+    await triggerKeyEvent('button#accordion-Home', 'keydown', KEY_UP_ARROW );
+    assert.equal(document.activeElement.id, "accordion-Profile");
+  });
+
+  test('should focus previous accordion on PAGE-UP', async function(assert) {
+    await focus('button#accordion-Home');
+    await triggerKeyEvent('button#accordion-Home', 'keydown', KEY_PAGE_UP );
+    assert.equal(document.activeElement.id, "accordion-Profile");
+  });
+
+  test('should focus first accordion on HOME', async function(assert) {
+    await focus('button#accordion-Home');
+    await triggerKeyEvent('button#accordion-Home', 'keydown', KEY_HOME );
+    assert.equal(document.activeElement.id, "accordion-Profile");
+  });
+
+  test('should focus last accordion on END', async function(assert) {
+    await focus('button#accordion-Profile');
+    await triggerKeyEvent('button#accordion-Profile', 'keydown', KEY_END );
+    assert.equal(document.activeElement.id, "accordion-Settings");
+  });
+
+
 
 });
 

@@ -3,7 +3,9 @@
           class="accordion-trigger"
           aria-controls={{sectId}}
           id={{accordionId}}
-          type="button" {{action select title}}>
+          type="button"
+          onkeydown={{action focusAccordion}}
+          {{action select title}}>
     <span class="accordion-title">
       {{title}}
     </span>

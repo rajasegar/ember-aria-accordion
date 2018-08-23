@@ -11,7 +11,15 @@ module('Integration | Component | accordion-panel', function(hooks) {
       this.set('active', e);
     });
 
-    await render(hbs`{{#accordion-panel title='Hello World' select=(action selectCallback)}}Hello World{{/accordion-panel}}`);
+    this.set('focusCallback', function(e) {
+      this.set('sample', e);
+    });
+
+    await render(hbs`{{#accordion-panel
+      title='Hello World'
+      select=(action selectCallback)
+      focusAccordion=(action focusCallback)
+    }}Hello World{{/accordion-panel}}`);
 
   });
 

@@ -1,11 +1,10 @@
-<dl id="accordionGroup" role="presentation" class="accordion">
-  {{yield (hash
-    panel=(component 'accordion-panel'
-    active=active
-    toggle=toggle
-    multiple=multiple
-    refresh=refresh
-    activePanels=activePanels
-    select=(action 'selectAccordion'))
-    )  }}
-</dl>
+{{yield (hash
+  panel=(component 'accordion-panel'
+  active=active
+  toggle=toggle
+  multiple=multiple
+  refresh=refresh
+  activePanels=activePanels
+  select=(action 'selectAccordion')
+  focusAccordion=(action 'focusAccordion')
+  ))  }}

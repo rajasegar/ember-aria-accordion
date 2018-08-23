@@ -32,4 +32,5 @@ export default Component.extend({
     }
   }),
   hidden: computed.not('ariaExpanded')
+
 });

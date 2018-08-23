@@ -1,12 +1,16 @@
 {
   "name": "ember-aria-accordion",
   "version": "1.0.5",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An accessible Accordion component in Ember using WAI-ARIA authoring practices",
   "keywords": [
     "ember-addon",
     "accordion",
     "aria",
-    "components"
+    "components",
+    "accessibility",
+    "a11y",
+    "expand",
+    "collapse"
   ],
   "license": "MIT",
   "author": "Rajasegar Chandran",
