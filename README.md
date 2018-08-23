@@ -46,8 +46,9 @@ Assumes toggle option is true, otherwise you would not be able to close any of t
 ## Keyboard Interaction
 
 ### Enter or Space:
-        When focus is on the accordion header for a collapsed panel, expands the associated panel. If the implementation allows only one panel to be expanded, and if another panel is expanded, collapses that panel.
-        When focus is on the accordion header for an expanded panel, collapses the panel if the implementation supports collapsing. Some implementations require one panel to be expanded at all times and allow only one panel to be expanded; so, they do not support a collapse function.
+When focus is on the accordion header for a collapsed panel, expands the associated panel. If the implementation allows only one panel to be expanded, and if another panel is expanded, collapses that panel.
+
+When focus is on the accordion header for an expanded panel, collapses the panel if the implementation supports collapsing. Some implementations require one panel to be expanded at all times and allow only one panel to be expanded; so, they do not support a collapse function.
 
 ### Tab: 
 Moves focus to the next focusable element; all focusable elements in the accordion are included in the page Tab sequence.

@@ -7,6 +7,8 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('allow-toggle');
+  this.route('allow-multiple');
 });
 
 export default Router;
