@@ -1,0 +1,58 @@
+.accordion {
+    border: 1px solid hsl(0, 0%, 82%);
+    border-radius: .3em;
+    box-shadow: 0 1px 2px hsl(0, 0%, 82%);
+}
+
+.accordion > * + * {
+    border-top: 1px solid hsl(0, 0%, 82%);
+}
+
+.accordion-trigger {
+    background: none;
+    border: 0;
+    color: hsl(0, 0%, 13%);
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+    padding: 1em 1.5em;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+.accordion dt:first-child .accordion-trigger {
+    border-radius: .3em .3em 0 0;
+}
+
+.accordion-trigger:focus,
+.accordion-trigger:hover {
+    background: hsl(0, 0%, 93%);
+}
+
+.accordion-icon {
+    border: solid hsl(0, 0%, 62%);
+    border-width: 0 2px 2px 0;
+    height: .5rem;
+    position: absolute;
+    right: 1.5em;
+    top: 50%;
+    transform: translateY(-60%) rotate(45deg);
+    width: .5rem;
+}
+
+.accordion-trigger:focus .accordion-icon,
+.accordion-trigger:hover .accordion-icon {
+    border-color: hsl(0, 0%, 13%);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.accordion-panel {
+    margin: 0;
+    padding: 1em 1.5em;
+}
+
