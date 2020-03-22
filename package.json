@@ -12,25 +12,25 @@
     "expand",
     "collapse"
   ],
+  "repository": "https://github.com/rajasegar/ember-aria-accordion",
   "license": "MIT",
   "author": "Rajasegar Chandran",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/rajasegar/ember-aria-accordion",
   "scripts": {
     "build": "ember build --environment=production",
-    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
-    "lint:hbs": "ember-template-lint .",
-    "start": "ember server",
-    "test": "npm-run-all lint:* test:*",
-    "test:ember": "ember test",
-    "test:ember-compatibility": "ember try:each",
     "coverage": "COVERAGE=true ember t",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "deploy": "scripts/deploy",
-    "publish-docs": "scripts/publish-docs"
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
+    "lint:hbs": "ember-template-lint .",
+    "publish-docs": "scripts/publish-docs",
+    "start": "ember server",
+    "test": "npm-run-all lint:* test:*",
+    "test:ember": "ember test",
+    "test:ember-compatibility": "ember try:each"
   },
   "dependencies": {
     "ember-cli-babel": "^7.18.0",
@@ -60,10 +60,15 @@
     "ember-template-lint": "^2.4.0",
     "eslint": "^6.8.0",
     "loader.js": "^4.7.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "release-it": "^13.1.1",
+    "release-it-lerna-changelog": "^2.1.0"
   },
   "engines": {
     "node": "10.* || >= 12"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "ember": {
     "edition": "octane"
@@ -71,5 +76,20 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "demoURL": "https://rajasegar.github.io/ember-aria-accordion"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
