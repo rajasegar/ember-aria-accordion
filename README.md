@@ -36,6 +36,8 @@ An Accordion component in Ember based on the [WAI-ARIA authoring practices](http
 ### active
 To set the active accordion panel
 
+
+
 ### toggle
 Allow for each toggle to both open and close individually
 
@@ -85,6 +87,16 @@ When focus is on an accordion header, moves focus to the last accordion header.
 * `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
 ## Building
 

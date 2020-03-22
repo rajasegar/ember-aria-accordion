@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-aria-accordion'
+  name: require('./package').name
 };
