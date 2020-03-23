@@ -6,36 +6,23 @@
 		</div>
 		<h1>ember-aria-accordion <span>An accessible accordion component in Ember using WAI-ARIA authoring practices.</span></h1>
 		<nav class="codrops-demos">
-      {{#link-to 'index' activeClass='current-demo'}}Home{{/link-to}}
-      {{#link-to 'allow-toggle' activeClass='current-demo'}}With Toggle option{{/link-to}}
-      {{#link-to 'allow-multiple' activeClass='current-demo'}}With multiple option{{/link-to}}
+      <LinkTo @route="index" @activeClass="current-demo">Home</LinkTo>
+      <LinkTo @route="allow-toggle" @activeClass="current-demo">With Toggle option</LinkTo>
+      <LinkTo @route="allow-multiple" @activeClass="current-demo">With multiple option</LinkTo>
 		</nav>
 	</header>
   <div class="demo-block">
     {{outlet}}
   </div>
-  <div style="margin:0 auto;text-align: center">
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- ember-aria-accordion -->
-  <ins class="adsbygoogle"
-  style="display:block"
-  data-ad-client="ca-pub-8659253101075791"
-  data-ad-slot="3221144347"
-  data-ad-format="auto"
-  data-full-width-responsive="true"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  </div>
-  <!-- Related demos -->
+    {{!-- Related demos --}}
 	<section class="content content--related">
 		<p>If you enjoyed this demo you might also like:</p>
 		<a class="media-item" href="http://rajasegar.github.io/ember-aria-switch/">
-      <img class="media-item__img" src="img/related/ember-aria-switch.jpg">
+      <img class="media-item__img" src="img/related/ember-aria-switch.jpg" alt="Link to ember-aria-switch">
 			<h3 class="media-item__title">ember-aria-switch</h3>
 		</a>
 		<a class="media-item" href="http://rajasegar.github.io/ember-aria-slider/">
-      <img class="media-item__img" src="img/related/ember-aria-slider.jpg">
+      <img class="media-item__img" src="img/related/ember-aria-slider.jpg" alt="Link to ember-aria-slider">
 			<h3 class="media-item__title">ember-aria-slider</h3>
 		</a>
 	</section>

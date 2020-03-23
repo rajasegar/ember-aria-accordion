@@ -1,6 +1,6 @@
 <h2> Allow toggle </h2>
-{{#aria-accordion active="Billing address" toggle=true  as |a|}}
-  {{#a.panel title="Personal Information" }}
+<AriaAccordion @active="Billing address" @toggle={{true}} as |a|>
+  <a.panel @title="Personal Information">
     <fieldset>
       <p>
         <label for="cufc1">
@@ -68,8 +68,8 @@
                id="cufc6">
       </p>
     </fieldset>
-  {{/a.panel}}
-  {{#a.panel title="Billing address" }}
+  </a.panel>
+  <a.panel @title="Billing address">
 
 
     <fieldset>
@@ -114,8 +114,8 @@
                id="b-zip">
       </p>
     </fieldset>
-  {{/a.panel}}
-  {{#a.panel title="Shipping Address" }}
+  </a.panel>
+  <a.panel @title="Shipping Address">
 
 
     <fieldset>
@@ -160,6 +160,6 @@
                id="m-zip">
       </p>
     </fieldset>
-  {{/a.panel}}
-{{/aria-accordion}}
+  </a.panel>
+</AriaAccordion>
 

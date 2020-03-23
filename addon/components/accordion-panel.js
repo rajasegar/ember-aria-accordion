@@ -12,6 +12,7 @@ export default Component.extend({
     return `sect-${this.get('title').replace(' ','')}`;
   }),
   ariaExpanded: computed('active', 'title', 'refresh', function() {
+    debugger
     let _allowToggle = this.get('toggle');
     let _active = this.get('active');
     let _title = this.get('title');

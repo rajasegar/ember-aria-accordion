@@ -1,21 +1,22 @@
 <dt role="heading" aria-level="3">
-  <button aria-expanded="{{ariaExpanded}}"
+  <button aria-expanded="{{this.ariaExpanded}}"
           class="accordion-trigger"
-          aria-controls={{sectId}}
-          id={{accordionId}}
+          aria-controls={{this.sectId}}
+          id={{this.accordionId}}
           type="button"
-          onkeydown={{action focusAccordion}}
-          {{action select title}}>
+          {{on "key-down"  this.focusAccordion}}
+          {{on "click" (fn @select @title)}}
+          >
     <span class="accordion-title">
-      {{title}}
+      {{@title}}
     </span>
     <span class="accordion-icon"></span>
   </button>
 </dt>
-<dd id={{sectId}}
+<dd id={{this.sectId}}
     role="region"
-    aria-labelledby={{accordionId}}
-    class="accordion-panel" hidden={{hidden}}>
+    aria-labelledby={{this.accordionId}}
+    class="accordion-panel" hidden={{this.hidden}}>
   <div>
     {{yield}}
   </div>

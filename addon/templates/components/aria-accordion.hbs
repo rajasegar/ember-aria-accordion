@@ -1,10 +1,10 @@
 {{yield (hash
   panel=(component 'accordion-panel'
-  active=active
-  toggle=toggle
-  multiple=multiple
-  refresh=refresh
-  activePanels=activePanels
-  select=(action 'selectAccordion')
-  focusAccordion=(action 'focusAccordion')
+  active=this.active
+  toggle=@toggle
+  multiple=@multiple
+  refresh=@refresh
+  activePanels=this.activePanels
+  select=this.selectAccordion
+  focusAccordion=this.focusAccordion
   ))  }}
