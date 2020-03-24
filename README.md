@@ -14,21 +14,21 @@ An Accordion component in Ember based on the [WAI-ARIA authoring practices](http
 
 ## Usage
 
-```hbs
-  {{#aria-accordion active="Billing address"  as |a|}}
-    {{#a.panel title="Personal Information" }}
-      <h2>Personal Information</h2>
-      <p>This is the accordion content for Personal Information</p>
-    {{/a.panel}}
-    {{#a.panel title="Billing address" }}
-      <h2>Billing Address</h2>
-      <p>This is the accordion content for Billing Address</p>
-    {{/a.panel}}
-    {{#a.panel title="Shipping Address" }}
-      <h2>Shipping Address</h2>
-      <p>This is the accordion content for Shipping Address</p>
-    {{/a.panel}}
-  {{/aria-accordion}}
+```html
+<AriaAccordion @active="Billing address" as |a|>
+  <a.panel @title="Personal Information">
+    <h2>Personal Information</h2>
+    <p>This is the accordion content for Personal Information</p>
+  </a.panel>
+  <a.panel @title="Billing address">
+    <h2>Billing Address</h2>
+    <p>This is the accordion content for Billing Address</p>
+  </a.panel>
+  <a.panel @title="Shipping Address">
+    <h2>Shipping Address</h2>
+    <p>This is the accordion content for Shipping Address</p>
+  </a.panel>
+</AriaAccordion>
 
 ```
 
