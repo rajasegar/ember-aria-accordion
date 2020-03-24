@@ -27,21 +27,13 @@ export default Component.extend({
 
   @action
   selectAccordion(e) {
-    debugger;
-    if(this.get('multiple')) {
-      let _activePanels = this.get('activePanels');
-      // let _active = this.get('active');
-      if(_activePanels.has(e) && this.get('toggle')) {
-        _activePanels.delete(e);
-      } else {
-        _activePanels.add(e);
-      }
-      this.set('activePanels', _activePanels);
+
+    let allowToggle = this.get('toggle');
+    let active = this.get('active');
+    if(allowToggle &&  active === e) {
+      this.set('active', '');
     } else {
       this.set('active', e);
-    }
-    if(this.get('toggle') || this.get('multiple')) {
-      this.toggleProperty('refresh');
     }
   },
 
