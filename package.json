@@ -1,6 +1,6 @@
 {
   "name": "ember-aria-accordion",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "An accessible Accordion component in Ember using WAI-ARIA authoring practices",
   "keywords": [
     "ember-addon",
